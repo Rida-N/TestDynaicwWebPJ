@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding ="ISO-8859-1"?>
 <!DOCTYPE html>
-<html lang="en"
-xmlns="http://www.w3.org/1999/xhtml"
-xmlns:h="http://xmlns.jcp.org/jsf/html"
-xmlns:p="http://primefaces.org/ui"> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<meta http-equiv ="Content-Type" content="text/html; charset=ISO-8859-1"/>
-	<title>Rida'sPlant.com</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Rida's Plant.com</title>
 </h:head>
 <h:body>
 	<h1>Welcome to Rida'sPlant.com</h1>
 	Promoting Plant Diversity through education.
-	Slogan:<em><h:outputLabel value ="#{applicationInfo.slogan}"/></em>
+	Slogan:<em><h:outputLabel value="#{applicationInfo.slogan}" /></em>
+	
+	Enter a plant name, and then choose Search.
+	<h:form>
+		<h:inputText value="#{plantSearch.name}" />
+		<h:commandButton value="Submit" action="search" />
+	</h:form>
+
+	<h:link value="Contact us" outcome="contactUs" />
 </h:body>
 </html>
